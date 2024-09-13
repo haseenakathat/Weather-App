@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+    --gradient: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 1100px; 
+  border-radius: 25px;
+  box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+  background-color: #222831;
+  color: #ffffff;
+  height: 400px;
+}
+
+.weather-side {
+  position: relative;
+  width: 30%; 
+  background-image: url("https://img.freepik.com/free-photo/sunset-beach-sea-wave_1150-11145.jpg");
+  background-size: cover;
+  border-radius: 25px 0 0 25px;
+  color: #ffffff;
+  margin-right: 0px; 
+}
+
+
+.weather-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 25px 0 0 25px;
+    opacity: 0.4;
+}
+
+.date-container {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.weather-container {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-temp {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.info-side {
+    width: 80%; 
+    padding: 25px;
+    background: #333;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.today-info-container {
+    flex-grow: 1;
+}
+
+.today-info {
+    display: flex;
+    justify-content: space-between; 
+    padding: 15px;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.today-info > div {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.week-container {
+    margin-top: 20px;
+}
+
+.week-list {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+
+.week-list > li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 200ms ease;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+  color: #ffffff;
+  width: 100px;
+  height: 143px; 
+  text-align: center;
+  justify-content: center; 
+  flex: none;
+}
+
+
+.week-list > li:hover {
+    transform: scale(1.1);
+    background: #fff;
+    color: #222831;
+}
+
+.location-container {
+    padding: 25px;
+}
+
+.location-input {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    background: var(--gradient);
+    color: #000000;
+    font-weight: 700;
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+    transition: transform 200ms ease;
+}
+
+.location-input:hover {
+    transform: scale(0.95);
+}
+.weather-info {
+  margin-left: 10px; 
+}
