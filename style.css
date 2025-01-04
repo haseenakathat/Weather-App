@@ -23,7 +23,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  width: 1100px; 
+  width: 1100px;
   border-radius: 25px;
   box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
   background-color: #222831;
@@ -33,14 +33,13 @@ body {
 
 .weather-side {
   position: relative;
-  width: 30%; 
+  width: 30%;
   background-image: url("https://img.freepik.com/free-photo/sunset-beach-sea-wave_1150-11145.jpg");
   background-size: cover;
   border-radius: 25px 0 0 25px;
   color: #ffffff;
-  margin-right: 0px; 
+  margin-right: 0px;
 }
-
 
 .weather-gradient {
     position: absolute;
@@ -61,7 +60,6 @@ body {
     position: absolute;
     bottom: 25px;
     left: 25px;
-    
 }
 
 .weather-icon img {
@@ -76,7 +74,7 @@ body {
 }
 
 .info-side {
-    width: 80%; 
+    width: 80%;
     padding: 25px;
     background: #333;
     border-radius: 0 25px 25px 0;
@@ -91,7 +89,7 @@ body {
 
 .today-info {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding: 15px;
     box-shadow: 0 0 50px -5px rgba(0, 0, 0);
     border-radius: 10px;
@@ -114,7 +112,6 @@ body {
   justify-content: space-around;
 }
 
-
 .week-list > li {
   padding: 10px 15px;
   cursor: pointer;
@@ -126,12 +123,11 @@ body {
   background: #333;
   color: #ffffff;
   width: 100px;
-  height: 143px; 
+  height: 143px;
   text-align: center;
-  justify-content: center; 
+  justify-content: center;
   flex: none;
 }
-
 
 .week-list > li:hover {
     transform: scale(1.1);
@@ -158,6 +154,111 @@ body {
 .location-input:hover {
     transform: scale(0.95);
 }
+
 .weather-info {
-  margin-left: 10px; 
+  margin-left: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .weather-side {
+        width: 100%;
+        height: 250px;
+        border-radius: 25px 25px 0 0;
+    }
+
+    .info-side {
+        width: 100%;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .weather-temp {
+        font-size: 3em;
+    }
+
+    .today-info {
+        flex-direction: column;
+    }
+
+    .week-list {
+        flex-direction: column;
+    }
+
+    .week-list > li {
+        width: 80%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .weather-side {
+        height: 200px;
+    }
+
+    .info-side {
+        padding: 20px;
+    }
+
+    .weather-temp {
+        font-size: 2.5em;
+    }
+
+    .today-info {
+        flex-direction: column;
+    }
+
+    .week-list > li {
+        width: 70%;
+    }
+
+    .location-input {
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .weather-side {
+        width: 100%;
+        height: 200px;
+    }
+
+    .info-side {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .weather-temp {
+        font-size: 2em;
+    }
+
+    .week-list > li {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+    }
+
+    .location-input {
+        padding: 14px;
+    }
 }
